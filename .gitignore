@@ -4,3 +4,5 @@ node_modules/
 *.sqlite
 *.xlsx
 .DS_Store
+data/
+web/dist/
