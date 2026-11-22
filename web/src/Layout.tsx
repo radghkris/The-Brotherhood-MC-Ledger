@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink, Navigate, Outlet } from 'react-router-dom';
 import { useAuth } from './AuthContext';
+import Logo from './Logo';
 
 const links = [
   ['/', 'Dashboard'],
@@ -19,7 +20,7 @@ export default function Layout() {
   return (
     <>
       <header className="bar">
-        <strong>The Brotherhood MC</strong>
+        <Logo />
         <button className="menu" aria-label="Menu" onClick={() => setOpen(!open)}>☰</button>
         <nav className={open ? 'open' : ''} onClick={() => setOpen(false)}>
           {links

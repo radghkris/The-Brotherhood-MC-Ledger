@@ -28,3 +28,4 @@ main { padding:1rem; max-width:960px; margin:0 auto; }
   .bar nav.open { display:flex; }
   .who { flex-basis:100%; order:4; }
 }
+.logo { display:block; flex:none; }
