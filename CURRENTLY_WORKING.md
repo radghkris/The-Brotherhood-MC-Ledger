@@ -1,17 +1,9 @@
 # Merge Lock
 
-Status: FREE
-
-<!--
-When taking the lock, replace the above with:
-
 Status: LOCKED
-Thread: <thread name / session>
-PR: <link>
-Since: <YYYY-MM-DD HH:MM UTC>
-
-Reset to "Status: FREE" after merging, then report back to the coordinator.
--->
+Thread: Use real emblem and add dashboard HUD
+PR: https://github.com/radghkris/The-Brotherhood-MC-Ledger/pull/5
+Since: 2026-11-22 20:28 UTC
 
 ## Queue
 
