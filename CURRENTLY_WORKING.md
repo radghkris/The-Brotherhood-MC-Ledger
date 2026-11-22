@@ -1,9 +1,17 @@
 # Merge Lock
 
+Status: FREE
+
+<!--
+When taking the lock, replace the above with:
+
 Status: LOCKED
-Thread: Fix dashboard logo and overlay boxes
-PR: https://github.com/radghkris/The-Brotherhood-MC-Ledger/pull/7
-Since: 2026-11-22 21:03 UTC
+Thread: <thread name / session>
+PR: <link>
+Since: <YYYY-MM-DD HH:MM UTC>
+
+Reset to "Status: FREE" after merging, then report back to the coordinator.
+-->
 
 ## Queue
 
