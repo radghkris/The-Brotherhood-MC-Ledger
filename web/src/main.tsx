@@ -9,6 +9,7 @@ import Setup from './pages/Setup';
 import Placeholder from './pages/Placeholder';
 import Ledger from './pages/Ledger';
 import Dashboard from './pages/Dashboard';
+import Backdrop from './Backdrop';
 import './styles.css';
 
 const pages: [string, string][] = [
@@ -46,6 +47,7 @@ function App() {
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
+      <Backdrop />
       <App />
     </BrowserRouter>
   </StrictMode>,
