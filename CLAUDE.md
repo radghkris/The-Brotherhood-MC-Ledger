@@ -44,5 +44,6 @@ repo root.
 
 ## Status
 
-- Design: `docs/superpowers/specs/2026-11-22-ledger-design.md` (pending approval)
+- Design: `docs/superpowers/specs/2026-11-22-ledger-design.md` (approved 2026-11-22)
+- Plans: `docs/superpowers/plans/` — Thread 1 Foundation: in progress
 - Stack: Node + TypeScript + Express + SQLite + React (see the design doc).
