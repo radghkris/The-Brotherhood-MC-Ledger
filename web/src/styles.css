@@ -1,16 +1,23 @@
-:root { color-scheme: dark; --bg:#14161a; --panel:#1e2229; --line:#2f3640; --text:#e6e8eb; --muted:#8b94a1; --accent:#d9a441; }
+:root { color-scheme: dark; --bg:#0b0c0b; --panel:#151815; --line:#26302a; --text:#efe8d6; --muted:#a39d8b; --accent:#2fd35a; --accent-hover:#5be883; --accent-ink:#06130a; --accent-dim:#123d1e; }
 * { box-sizing: border-box; }
 body { margin:0; background:var(--bg); color:var(--text); font:16px/1.5 system-ui,sans-serif; }
 h1,h2 { margin:.2em 0 .5em; }
 .muted { color:var(--muted); padding:1rem; }
-.error { color:#ff7b72; margin:.5rem 0; }
-button { background:var(--accent); color:#111; border:0; border-radius:6px; padding:.5rem .9rem; font:inherit; cursor:pointer; }
+.error { color:#ff8a7a; margin:.5rem 0; }
+a { color:var(--accent); }
+a:hover { color:var(--accent-hover); }
+h1,h2 { color:var(--text); letter-spacing:.04em; }
+button { background:var(--accent); color:var(--accent-ink); border:0; border-radius:6px; padding:.5rem .9rem; font:inherit; font-weight:600; cursor:pointer; }
+button:hover { background:var(--accent-hover); }
+:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+input:focus,select:focus { outline:none; border-color:var(--accent); box-shadow:0 0 0 2px var(--accent-dim); }
 input,select { display:block; width:100%; margin:.25rem 0 1rem; padding:.55rem; background:var(--bg); color:var(--text); border:1px solid var(--line); border-radius:6px; font:inherit; }
 .card { max-width:420px; margin:2rem auto; padding:1.5rem; background:var(--panel); border:1px solid var(--line); border-radius:10px; width:calc(100% - 2rem); }
-.bar { display:flex; align-items:center; gap:1rem; padding:.6rem 1rem; background:var(--panel); border-bottom:1px solid var(--line); flex-wrap:wrap; }
+.bar { display:flex; align-items:center; gap:1rem; padding:.6rem 1rem; background:var(--panel); border-bottom:2px solid var(--accent); flex-wrap:wrap; }
 .bar nav { display:flex; gap:.25rem; flex:1; }
 .bar nav a { color:var(--muted); text-decoration:none; padding:.3rem .6rem; border-radius:6px; }
-.bar nav a.active { color:var(--text); background:var(--line); }
+.bar nav a:hover { color:var(--text); }
+.bar nav a.active { color:var(--accent); background:var(--accent-dim); }
 .who { color:var(--muted); font-size:.9rem; }
 .who button { margin-left:.5rem; padding:.25rem .6rem; }
 .menu { display:none; margin-left:auto; }
