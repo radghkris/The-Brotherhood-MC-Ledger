@@ -2,7 +2,7 @@
   /* Boxes over the site-wide logo backdrop: 0 = clear, 1 = solid. Text always stays 100% opaque. */
   --hud-box-alpha:.5;
   /* Patch-rocker lettering, used for the login and setup title. */
-  --font-patch:'Pirata One', Georgia, serif; --hud-box-rgb:21 24 21; }
+  --font-patch:'Rye', Georgia, serif; --hud-box-rgb:21 24 21; }
 * { box-sizing: border-box; }
 body { margin:0; background:var(--bg); color:var(--text); font:17px/1.55 system-ui,sans-serif; }
 h1,h2 { margin:.2em 0 .5em; }
@@ -69,4 +69,4 @@ button, .btn, input, select { text-shadow:none; }
 .hud-money { font-size:1.35rem; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--accent); }
 .hud-list.withdrawal .hud-money { color:#ff9a8a; }
 
-.card > h1 { font-family:var(--font-patch); font-weight:400; font-size:2.6rem; text-transform:uppercase; letter-spacing:.04em; line-height:1.1; }
+.card > h1 { font-family:var(--font-patch); font-weight:400; font-size:1.7rem; text-transform:uppercase; letter-spacing:.02em; white-space:nowrap; line-height:1.1; }

@@ -10,7 +10,7 @@ import Placeholder from './pages/Placeholder';
 import Ledger from './pages/Ledger';
 import Dashboard from './pages/Dashboard';
 import Backdrop from './Backdrop';
-import '@fontsource/pirata-one/400.css';
+import '@fontsource/rye/400.css';
 import './styles.css';
 
 const pages: [string, string][] = [
