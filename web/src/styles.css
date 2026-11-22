@@ -49,6 +49,8 @@ small { color:var(--muted); }
 .hud-treasury, .hud-list { background:rgb(var(--hud-box-rgb) / var(--hud-box-alpha)); }
 .card, .panel, .hud-treasury, .hud-list, main > h1, main > h2 { color:var(--text); text-shadow:0 1px 3px #000; }
 button, .btn, input, select { text-shadow:none; }
+.card > h1, .card > h2 { text-align:center; }
+.card > button { display:block; margin:0 auto; }
 .hud-treasury { text-align:center; border:2px solid var(--accent); border-radius:12px; padding:1rem; margin-bottom:1rem; box-shadow:0 0 18px var(--accent-dim); }
 .hud-label { display:block; font-size:1.1rem; letter-spacing:.25em; text-transform:uppercase; color:var(--muted); }
 .hud-amount { display:block; font-size:clamp(2.6rem,10vw,4.5rem); line-height:1.1; color:var(--accent); font-variant-numeric:tabular-nums; }
