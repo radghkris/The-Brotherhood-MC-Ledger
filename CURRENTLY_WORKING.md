@@ -1,6 +1,18 @@
 # Merge Lock
 
+Status: FREE
+
+<!--
+When taking the lock, replace the above with:
+
 Status: LOCKED
-Thread: Add update.bat to repo
-PR: https://github.com/radghkris/The-Brotherhood-MC-Ledger/pull/2
-Since: 2026-11-22 19:39 UTC
+Thread: <thread name / session>
+PR: <link>
+Since: <YYYY-MM-DD HH:MM UTC>
+
+Reset to "Status: FREE" after merging, then report back to the coordinator.
+-->
+
+## Queue
+
+(empty)
