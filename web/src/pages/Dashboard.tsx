@@ -23,10 +23,6 @@ export default function Dashboard() {
 
   return (
     <div className="hud">
-      {/* Fixed, opaque backdrop: the patch stays put while the panels scroll over it. */}
-      <div className="hud-backdrop" aria-hidden="true">
-        <img src="/emblem.png" alt="" />
-      </div>
       {error && <p className="error">{error}</p>}
       <section className="hud-treasury" aria-label="Treasury">
         <span className="hud-label">Treasury</span>
