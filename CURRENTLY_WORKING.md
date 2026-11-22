@@ -1,6 +1,18 @@
 # Merge Lock
 
+Status: FREE
+
+<!--
+When taking the lock, replace the above with:
+
 Status: LOCKED
-Thread: Thread 1 Foundation (claude/thread-1-foundation)
-PR: https://github.com/radghkris/The-Brotherhood-MC-Ledger/pull/1
-Since: 2026-11-22 19:35 UTC
+Thread: <thread name / session>
+PR: <link>
+Since: <YYYY-MM-DD HH:MM UTC>
+
+Reset to "Status: FREE" after merging, then report back to the coordinator.
+-->
+
+## Queue
+
+(empty)
