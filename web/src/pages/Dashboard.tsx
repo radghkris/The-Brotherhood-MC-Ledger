@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { api } from '../api';
-import Logo from '../Logo';
 
 type Entry = {
   id: number; date: string; description: string; type: 'deposit' | 'withdrawal'; amount: number;
@@ -24,7 +23,10 @@ export default function Dashboard() {
 
   return (
     <div className="hud">
-      <div className="hud-logo"><Logo width={400} /></div>
+      {/* Fixed, opaque backdrop: the patch stays put while the panels scroll over it. */}
+      <div className="hud-backdrop" aria-hidden="true">
+        <img src="/emblem.png" alt="" />
+      </div>
       {error && <p className="error">{error}</p>}
       <section className="hud-treasury" aria-label="Treasury">
         <span className="hud-label">Treasury</span>
