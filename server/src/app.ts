@@ -6,10 +6,12 @@ import { fileURLToPath } from 'node:url';
 import type { Db } from './db.js';
 import { attachUser } from './auth/middleware.js';
 import { authRouter } from './routes/auth.js';
+import { entriesRouter } from './routes/entries.js';
 
 /** Later threads add one line per feature router here. */
 export function registerRoutes(app: Express, db: Db): void {
   app.use(authRouter(db));
+  app.use(entriesRouter(db));
 }
 
 export function createApp(db: Db): Express {
