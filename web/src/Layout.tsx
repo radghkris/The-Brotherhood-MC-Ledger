@@ -20,7 +20,7 @@ export default function Layout() {
   return (
     <>
       <header className="bar">
-        <Logo height={128} />
+        <Logo height={128} ashen />
         <button className="menu" aria-label="Menu" onClick={() => setOpen(!open)}>☰</button>
         <nav className={open ? 'open' : ''} onClick={() => setOpen(false)}>
           {links
