@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Setup from './pages/Setup';
 import Placeholder from './pages/Placeholder';
 import Ledger from './pages/Ledger';
+import Dashboard from './pages/Dashboard';
 import './styles.css';
 
 const pages: [string, string][] = [
@@ -31,8 +32,9 @@ function App() {
         <Route path="/setup" element={needed ? <Setup onDone={() => setNeeded(false)} /> : <Navigate to="/login" replace />} />
         <Route path="/login" element={needed ? <Navigate to="/setup" replace /> : <Login />} />
         <Route element={needed ? <Navigate to="/setup" replace /> : <Layout />}>
+          <Route path="/" element={<Dashboard />} />
           <Route path="/ledger" element={<Ledger />} />
-          {pages.filter(([path]) => path !== '/ledger').map(([path, name]) => (
+          {pages.filter(([path]) => path !== '/ledger' && path !== '/').map(([path, name]) => (
             <Route key={path} path={path} element={<Placeholder name={name} />} />
           ))}
         </Route>

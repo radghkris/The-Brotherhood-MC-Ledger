@@ -1,9 +1,9 @@
-:root { color-scheme: dark; --bg:#0b0c0b; --panel:#151815; --line:#26302a; --text:#efe8d6; --muted:#a39d8b; --accent:#2fd35a; --accent-hover:#5be883; --accent-ink:#06130a; --accent-dim:#123d1e; }
+:root { color-scheme: dark; --bg:#0b0c0b; --panel:#151815; --line:#26302a; --text:#fff8e6; --muted:#dcd5c0; --accent:#4ae870; --accent-hover:#7dff9c; --accent-ink:#06130a; --accent-dim:#123d1e; }
 * { box-sizing: border-box; }
-body { margin:0; background:var(--bg); color:var(--text); font:16px/1.5 system-ui,sans-serif; }
+body { margin:0; background:var(--bg); color:var(--text); font:17px/1.55 system-ui,sans-serif; }
 h1,h2 { margin:.2em 0 .5em; }
 .muted { color:var(--muted); padding:1rem; }
-.error { color:#ff8a7a; margin:.5rem 0; }
+.error { color:#ffa89b; margin:.5rem 0; }
 a { color:var(--accent); }
 a:hover { color:var(--accent-hover); }
 h1,h2 { color:var(--text); letter-spacing:.04em; }
@@ -15,10 +15,10 @@ input,select { display:block; width:100%; margin:.25rem 0 1rem; padding:.55rem; 
 .card { max-width:420px; margin:2rem auto; padding:1.5rem; background:var(--panel); border:1px solid var(--line); border-radius:10px; width:calc(100% - 2rem); }
 .bar { display:flex; align-items:center; gap:1rem; padding:.6rem 1rem; background:var(--panel); border-bottom:2px solid var(--accent); flex-wrap:wrap; }
 .bar nav { display:flex; gap:.25rem; flex:1; }
-.bar nav a { color:var(--muted); text-decoration:none; padding:.3rem .6rem; border-radius:6px; }
+.bar nav a { color:var(--muted); text-decoration:none; font-size:1.05rem; font-weight:600; padding:.4rem .75rem; border-radius:6px; }
 .bar nav a:hover { color:var(--text); }
 .bar nav a.active { color:var(--accent); background:var(--accent-dim); }
-.who { color:var(--muted); font-size:.9rem; }
+.who { color:var(--muted); font-size:1rem; }
 .who button { margin-left:.5rem; padding:.25rem .6rem; }
 .menu { display:none; margin-left:auto; }
 main { padding:1rem; max-width:960px; margin:0 auto; }
@@ -34,9 +34,28 @@ main { padding:1rem; max-width:960px; margin:0 auto; }
 .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:0 1rem; }
 .btn { display:inline-block; background:var(--accent); color:var(--accent-ink); font-weight:600; border-radius:6px; padding:.5rem .9rem; text-decoration:none; }
 .tablewrap { overflow-x:auto; }
-table { width:100%; border-collapse:collapse; font-size:.9rem; }
+table { width:100%; border-collapse:collapse; font-size:1rem; }
 th,td { padding:.4rem .5rem; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
 .num { text-align:right; white-space:nowrap; }
 tr.void td { text-decoration:line-through; color:var(--muted); }
 tr.void td:last-child { text-decoration:none; }
 small { color:var(--muted); }
+
+.hud { max-width:860px; margin:0 auto; }
+.hud-logo { display:flex; justify-content:center; margin:.5rem 0 1rem; }
+.hud-logo .logo { max-width:100%; }
+.hud-treasury { text-align:center; background:var(--panel); border:2px solid var(--accent); border-radius:12px; padding:1rem; margin-bottom:1rem; box-shadow:0 0 18px var(--accent-dim); }
+.hud-label { display:block; font-size:1.1rem; letter-spacing:.25em; text-transform:uppercase; color:var(--muted); }
+.hud-amount { display:block; font-size:clamp(2.6rem,10vw,4.5rem); line-height:1.1; color:var(--accent); font-variant-numeric:tabular-nums; }
+.hud-amount.neg { color:#ff9a8a; }
+.hud-lists { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1rem; }
+.hud-list { background:var(--panel); border:1px solid var(--line); border-top:4px solid var(--accent); border-radius:10px; padding:.75rem 1rem 1rem; }
+.hud-list.withdrawal { border-top-color:#ff9a8a; }
+.hud-list h2 { font-size:1.15rem; text-transform:uppercase; }
+.hud-list ul { list-style:none; margin:0; padding:0; }
+.hud-list li { display:flex; justify-content:space-between; align-items:center; gap:.75rem; padding:.55rem 0; border-bottom:1px solid var(--line); }
+.hud-list li:last-child { border-bottom:0; }
+.hud-what { display:flex; flex-direction:column; min-width:0; }
+.hud-desc { font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.hud-money { font-size:1.35rem; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--accent); }
+.hud-list.withdrawal .hud-money { color:#ff9a8a; }
