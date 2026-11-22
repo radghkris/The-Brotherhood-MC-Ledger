@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { mkdtempSync, existsSync } from 'node:fs';
+import { mkdtempSync, existsSync, readdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { openDb, runMigrations } from '../src/db.js';
@@ -9,7 +9,8 @@ describe('db', () => {
     const db = openDb(':memory:');
     expect(() => runMigrations(db)).not.toThrow();
     const rows = db.prepare('SELECT * FROM schema_migrations').all();
-    expect(rows).toHaveLength(1);
+    const files = readdirSync(join(__dirname, '../migrations')).filter((f) => f.endsWith('.sql'));
+    expect(rows).toHaveLength(files.length);
   });
   it('creates missing data directory', () => {
     const tmp = mkdtempSync(join(tmpdir(), 'ledger-'));
